@@ -1,3 +1,4 @@
+# Prog03. lower() converts all characters of the string into lower case. Create a program that do the same functionality without using lower() function.
 def max_lower():
     string = input("Enter a word, phrase, or sentence: ")
     result = ""
@@ -6,10 +7,10 @@ def max_lower():
             result += chr(ord(char) + 32)
         else:
             result += char
-                   
+
     print(result)
 
-max_lower
+max_lower()
 
 
 

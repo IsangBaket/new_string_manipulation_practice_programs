@@ -4,7 +4,7 @@ def max_lower():
     result = ""
     for char in string:
         if "A" <= char <= "Z":
-            result += chr(ord(char) + 32)
+            result += chr(ord(char) + 32) # link to ascii value chart: https://www.w3resource.com/w3r_images/java-basic-image-exercise-41.png
         else:
             result += char
 

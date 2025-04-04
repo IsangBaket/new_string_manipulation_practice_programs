@@ -1,14 +1,14 @@
 # Prog04. isupper() check if all characters of the string is on upper case. 
 # Create a program that do the same functionality without using isupper() function.
 
+def max_isupper():
+    string = input("Enter a word, phrase, or sentence: ")
 
-# this is still a pseudocode I still need to d
-ask user input 
+    for char in string:
+        if "a" <= char <= "z":
+            print("False")
+        else: 
+            print("True")
 
-for char in user input # iterate over every character 
-    if all characters in user input is in uppercase
-        print True
-
-    else 
-        print False
+max_isupper()
 

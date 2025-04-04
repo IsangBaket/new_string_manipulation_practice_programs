@@ -7,8 +7,9 @@ def max_isupper():
     for char in string:
         if "a" <= char <= "z":
             print("False")
-        else: 
-            print("True")
-
+            return  # exits function if lower case is found
+        
+        print("True")   # prints True if no return was done
+        
 max_isupper()
 

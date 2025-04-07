@@ -1,12 +1,16 @@
 # Prog05. endswith() check if the string end part matches the function parameter. 
 # Create a program that do the same functionality without using endswith() function.
 
-ask user input 
-ask what character ends with 
+def max_endswith():
+    string = input("Input a string: ")
+    suffix = input("Input a suffix: ")
+    
+    for char in string:
+        if char == suffix:
+            print("True")
+            return
+        else: 
+            print("False")
 
-for characters in user input # iterate over user input
-    loop goes through every string then checks if its same with input 2
-    if user input endswith 
-        print True
-    else 
-        False
+
+max_endswith()

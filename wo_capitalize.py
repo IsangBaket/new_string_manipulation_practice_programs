@@ -3,7 +3,14 @@
 
 def max_capitalize(string):
     first_char = chr(ord(string[0]) - 32)
-    following_char = chr(ord(string[1:] + 32))
+
+    following_char = ''
+    for char in string[1:]:
+        if 'A' <= char <= 'Z':
+            following_char += chr(ord(char) + 32)
+        else: 
+            following_char += char
+    
     return first_char + following_char
     
 

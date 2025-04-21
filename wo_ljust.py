@@ -2,7 +2,9 @@
 # Create a program that do the same functionality without using ljust() function.
 
 def max_ljust(word,padding,string): 
-    pass
+    padding = int(padding)   # transform user input to integer
+    padding = padding - len(word)   
+    return word + padding * string   # returns justified word
 
 
 word = input("Input a word you want to format: ")   # asks user for what word to format

@@ -2,15 +2,19 @@
 # Create a program that do the same functionality without using endswith() function.
 
 def max_endswith():
-    string = input("Input a string: ")
-    suffix = input("Input a suffix: ")
+    user_input = input("Input a string: ")
+    user_suffix = input("Input a suffix: ")
     
-    for char in string:
-        if char == suffix:
-            print("True")
-            return
-        else: 
-            print("False")
+    string = len(user_input)
+    suffix = len(user_suffix)
+
+    ends_with = str[string - suffix]
+    
+    
+    if user_suffix == ends_with:
+        print("True")
+    else: 
+        print("False")
 
 
 max_endswith()

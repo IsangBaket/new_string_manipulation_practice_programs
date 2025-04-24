@@ -2,21 +2,30 @@
 # And all other letter in small case. Create a program that do the same functionality without using title() function.
 
 def max_title(string):
-    string = string.split()
-    first_char = chr(ord(string[0]) - 32)
+    words = string.split()
+    result = []
 
-    following_char = ''
-    for char in string[1:]:
-        if 'A' <= char <= 'Z':
-            following_char += chr(ord(char) + 32)
-        else: 
-            following_char += char
-    return first_char + following_char
+    for word in words:
+        if word:  # check if word is not empty
+            first_char = word[0]
+            if 'a' <= first_char <= 'z':
+                first_char = chr(ord(first_char) - 32)  # to uppercase
+            new_word = first_char
 
-    
+            for char in word[1:]:
+                if 'A' <= char <= 'Z':
+                    char = chr(ord(char) + 32)  # to lowercase
+                new_word += char
+
+            result.append(new_word)
+        else:
+            result.append('')
+
+    return ' '.join(result)
 
 string = input("Input a phrase or sentence to capitalize: ")  # asks user for a string
 
 result = max_title(string)   # calls function
 
 print(result)   # prints result of function
+
